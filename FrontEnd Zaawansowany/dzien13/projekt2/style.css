@@ -1,0 +1,42 @@
+body {
+    min-height: 200vh;
+}
+
+.wrapper {
+    margin: 10px 70px;
+    font-family: arial;
+    line-height: 240%;
+}
+
+.burger {
+    position: fixed;
+    width: 40px;
+    text-align: center;
+    top: 20px;
+    right: 20px;
+    font-size: 40px;
+    z-index: 1;
+    transition: .2s;
+}
+
+i.off {
+    display: none;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 30vh;
+    background-color: #000;
+    transition: .2s;
+}
+
+nav.off {
+    top: -300px;
+}
+
+.fa-times {
+    color: white;
+}

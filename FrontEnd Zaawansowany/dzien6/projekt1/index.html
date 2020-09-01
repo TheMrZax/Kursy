@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animacja</title>
+
+    <style>
+        body {
+            animation: sky 15s infinite linear;
+            background-color: #444;
+        }
+
+        .sun {
+            animation: sun 15s infinite linear;
+            position: fixed;
+            bottom: 12%;
+            left: 10%;
+            width: 15vw;
+            height: 15vw;
+            background-color: darkred;
+            border-radius: 50%;
+        }
+
+        .grass {
+
+            animation: grass 15s infinite linear;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 30vh;
+            background-color: #222;
+        }
+
+        @keyframes sky {
+            0% {
+                background-color: #444;
+            }
+
+            30% {
+                background-color: pink;
+            }
+
+            50% {
+                background-color: lightblue;
+            }
+
+            70% {
+                background-color: orange;
+            }
+
+            100% {
+                background-color: #444;
+            }
+        }
+
+        @keyframes grass {
+            0% {
+                background-color: #222;
+            }
+
+            30% {
+                background-color: rgb(41, 88, 24);
+            }
+
+            50% {
+                background-color: rgb(16, 182, 11);
+            }
+
+            70% {
+                background-color: rgb(4, 75, 19);
+            }
+
+            100% {
+                background-color: #222;
+            }
+        }
+
+        @keyframes sun {
+            0% {
+                background-color: darkred;
+                bottom: 12%;
+                left: 10%;
+            }
+
+            30% {}
+
+            50% {
+                background-color: yellow;
+                bottom: 55%;
+            }
+
+            70% {}
+
+            100% {
+                background-color: darkred;
+                bottom: 12%;
+                left: 80%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sun"></div>
+    <div class="grass"></div>
+</body>
+
+</html>

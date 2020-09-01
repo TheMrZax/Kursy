@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .sekcja1 {
+            background-color: royalblue;
+            height: 100vh;
+        }
+
+        .sekcja2 {
+            background-color: deepskyblue;
+            height: 500px;
+        }
+
+        .sekcja3 {
+            background-color: gold;
+            height: 80vh;
+        }
+
+        .sekcja4 {
+            background-color: pink;
+            height: 60vh;
+        }
+
+        .info {
+            position: fixed;
+            left: 0;
+            height: 70px;
+            width: 100%;
+            background-color: rgba(240, 240, 240, 0.664);
+            font-size: 30px;
+            line-height: 70px;
+            text-align: center;
+            bottom: -75px;
+            transition: .8s;
+        }
+
+        .info.active {
+            bottom: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="sekcja1"></section>
+    <section class="sekcja2"></section>
+    <section class="sekcja3"></section>
+    <section class="sekcja4"></section>
+    <div class="info">Obecna pozycja scrolla:</div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).on('scroll', function () {
+            // console.log($(document).scrollTop())
+            if ($(window).scrollTop() > 50) {
+                $('.info').addClass('active')
+            } else {
+                $('.info').removeClass('active')
+            }
+            $('.info').text("Obecna pozycja scrolla: " + $(window).scrollTop() + "px")
+        })
+    </script>
+</body>
+
+</html>

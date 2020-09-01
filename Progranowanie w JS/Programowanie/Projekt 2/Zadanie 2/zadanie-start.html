@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Zadanie dla Ciebie - Skroll + zmiana wielkości prostokąta</title>
+</head>
+
+<body>
+    <script>
+        //Stworzenie diva i przypisanie go do zmiennej
+        const rect = document.createElement('div');
+        //Umieszczenie diva przed znacznikiem zamykającym body
+        document.body.appendChild(rect);
+        //Deklaracja i przypisanie początkowej wartości dla diva
+        let height = 20;
+        //Flaga
+        let grow = true;
+        //Główna funkcja (strzałkowa) odpowiadająca za działanie programu
+        const changeHeight = () => {
+            //Funkcja zmieniająca flagę, sprawdza, czy zmienna height przekroczyła wysokość okna czy nie. Jeżeli tak, zmienia flagę.
+            if (height >= window.innerHeight / 2) {
+                grow = !grow;
+
+            } //W wypadku, gdy height jest mniejsze lub równe 0, zmień flagę 
+            else if (height <= 0) {
+                grow = !grow;
+            }
+            //Jeżeli flaga jest true, dodaj do height 5.
+            if (grow) {
+                height += 5;
+                rect.style.height = `${height}px`;
+            } //Jeśli false, odejmij od height 5.
+            else {
+                height -= 5;
+                rect.style.height = `${height}px`;
+            }
+        }
+
+        //Style określone dla poszczególnych elementów za pomocą JS
+        document.body.style.margin = 0;
+        document.body.style.height = "10000px"
+        rect.style.height = `${height}px`;
+        rect.style.width = "100%"
+        rect.style.position = "fixed";
+        rect.style.left = 0;
+        rect.style.top = 0;
+        rect.style.backgroundColor = 'green'
+        //Ustawienie nasłuchiwania na window na scrolla 
+        window.addEventListener('scroll', changeHeight)
+    </script>
+</body>
+
+</html>

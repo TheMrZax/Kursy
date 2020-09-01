@@ -1,0 +1,44 @@
+<!-- Zadanie 1 dla Ciebie - Ikona hamburger -->
+
+<!--
+    1. Importuj Font Awesome 
+    2. Dodaj ikonę o nazwie bars 
+3. Ustaw ikonę względem przeglądarki 50px od prawej i 30px od góry. Przypnij ją do przeglądarki.
+4. Ustaw ikonę by miała wielkość 40px;
+5. Po najechaniu myszką ikonę ma być czarna (początkowo szara) a cursor ma stać się rączką.
+6. Powiększ rozmiar strony w pionie na mininalnie dwukrotność okna przeglądarki
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ikona Hamburger</title>
+
+    <script src="https://kit.fontawesome.com/688478386a.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            min-height: 200vh;
+        }
+
+        div {
+            position: fixed;
+            top: 30px;
+            right: 50px;
+            color: #666;
+            font-size: 40px;
+            transition: .15s;
+        }
+
+        div:hover {
+            color: black;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div><i class="fas fa-bars"></i></div>
+    <!-- dodaj ikonę o nazwie bars -->
+
+</body></html>

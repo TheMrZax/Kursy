@@ -1,0 +1,67 @@
+/*Powyżej 1600px*/
+
+body {
+    background-color: rgb(255, 0, 0);
+}
+
+div {
+    color: white;
+    font-size: 50px;
+    font-family: sans-serif;
+}
+
+div.s1 {
+    display: block;
+}
+
+div.s2,
+div.s3 {
+    display: none;
+}
+
+@media (max-width: 1600px) {
+    body {
+        background-color: rgb(205, 20, 0);
+    }
+
+    div.s1,
+    div.s3 {
+        display: none;
+    }
+
+    div.s2 {
+        display: block;
+    }
+}
+
+@media (max-width: 1024px) {
+    body {
+        background-color: rgb(155, 40, 0);
+    }
+
+    div.s2 {
+        color: black;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        background-color: rgb(105, 60, 0);
+    }
+
+    div.s3 {
+        display: block;
+    }
+
+    div.s1,
+    div.s2 {
+        display: none;
+    }
+}
+
+@media (max-width: 360px) {
+    body {
+        background-color: rgb(55, 80, 20);
+
+    }
+}

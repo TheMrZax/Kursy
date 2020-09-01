@@ -1,0 +1,63 @@
+<!-- https://openclipart.org/detail/239883/walking-man-sprite-sheet -->
+<!-- 2048w 314h -->
+<!-- 256px 1 kadr -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Walk</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        section {
+            background-image: url("walking.png");
+            width: 256px;
+            height: 314px;
+            animation: walk .7s infinite steps(8), slide 8s infinite linear;
+        }
+
+        @keyframes walk {
+            0% {
+                background-position: 0 0;
+            }
+
+            100% {
+                background-position: -2048px 0;
+            }
+        }
+
+        @keyframes slide {
+            0% {
+                margin-left: 0;
+            }
+
+            49.99% {
+                transform: rotateY(0);
+            }
+
+            50% {
+                margin-left: calc(100% - 256px);
+                transform: rotateY(180deg);
+            }
+
+            99.99% {
+                transform: rotateY(180deg);
+            }
+
+            100% {
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section></section>
+</body>
+
+</html>

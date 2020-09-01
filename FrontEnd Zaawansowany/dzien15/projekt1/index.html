@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide/Banner</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            font-family: 'oswald';
+            font-size: 10px;
+        }
+
+        .team {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            background-color: #bbb;
+        }
+
+        .team img.color {
+            position: absolute;
+            bottom: 0;
+            right: -5%;
+            height: 35%;
+            z-index: 1;
+            animation: color 4s linear infinite;
+        }
+
+        .team img.mono {
+            position: absolute;
+            bottom: 0;
+            left: -70%;
+            height: 110%;
+            opacity: .2;
+            animation: mono 4s linear infinite;
+        }
+
+        .team .member {
+            position: absolute;
+            top: 20%;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            animation: text 4s linear infinite;
+        }
+
+        .team h1 {
+            font-size: 3rem;
+        }
+
+        .team h2 {
+            font-size: 2.2rem;
+            text-transform: uppercase;
+            font-weight: 400;
+        }
+
+        @media (orientation: landscape) {
+            .team img.color {
+                right: 5%;
+                height: 55%;
+            }
+
+            .team img.mono {
+                bottom: -10%;
+                left: -15%;
+                height: 130%;
+            }
+
+            .team .member {
+                top: 20%;
+                right: 0;
+                left: auto;
+                width: 60%;
+            }
+        }
+
+        @media (min-width: 1025px) {
+            .team .member {
+                right: 0;
+                left: auto;
+                width: 60%;
+            }
+
+            .team h1 {
+                font-size: 6rem;
+            }
+
+            .team h2 {
+                font-size: 4rem;
+            }
+        }
+
+        @keyframes color {
+            0% {
+                transform: translateX(0);
+                opacity: 0;
+            }
+
+            8% {
+                opacity: 0;
+            }
+
+            13% {
+                opacity: 1;
+            }
+
+            87% {
+                opacity: 1;
+            }
+
+            92% {
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateX(-5%);
+                opacity: 0;
+            }
+        }
+
+        @keyframes mono {
+            0% {
+                transform: translateX(0);
+                opacity: 0;
+            }
+
+            8% {
+                opacity: 0;
+            }
+
+            13% {
+                opacity: .2;
+            }
+
+            87% {
+                opacity: .2;
+            }
+
+            92% {
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateX(3%) scale(1.1);
+                opacity: 0;
+            }
+        }
+
+        @keyframes text {
+            0% {
+                transform: scale(1);
+                opacity: 0;
+            }
+
+            8% {
+                opacity: 0;
+            }
+
+            13% {
+                opacity: 1;
+            }
+
+            87% {
+                opacity: 1;
+            }
+
+            92% {
+                opacity: 0;
+            }
+
+            100% {
+                transform: scale(1.1);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="team">
+        <img src="img/s1.png" alt="dziewczyna 1 kolor" class="color">
+        <img src="img/s1a.png" alt="dziewczyna 1 szara" class="mono">
+        <div class="member">
+            <h1>Anna Baugard</h1>
+            <h2>Programistka JS</h2>
+        </div>
+    </section>
+    <script>
+        let activeElement = 0;
+
+        const colorImgHtml = document.querySelector('.color');
+        const monoImgHtml = document.querySelector('.mono');
+        const h1Html = document.querySelector('.member h1');
+        const h2Html = document.querySelector('.member h2');
+
+        const colorImages = ["img/s1.png", "img/s2.png", "img/s3.png"];
+        const monoImages = ["img/s1a.png", "img/s2a.png", "img/s3a.png"];
+        const names = ["Anna Baugard", "Marek Feliksiak", "Arek Pawłowicz"];
+        const professions = ["Programistka JS", "UX/UI Designer", "Front-end Developer"];
+
+        function changeElement() {
+            colorImgHtml.src = colorImages[activeElement];
+            monoImgHtml.src = monoImages[activeElement];
+            h1Html.textContent = names[activeElement];
+            h2Html.textContent = professions[activeElement];
+            activeElement++;
+            if (activeElement == colorImages.length) {
+                activeElement = 0
+            }
+        }
+        setInterval(changeElement, 4000)
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,116 @@
+/*
+font-family: 'Roboto Condensed', sans-serif;
+font-family: 'Oswald', sans-serif;
+*/
+
+/*Reset*/
+
+* {
+    margin: 0;
+    padding: 0;
+    /*    box-sizing: border-box;*/
+}
+
+html {
+    font-size: 10px;
+    font-family: 'Oswald', sans-serif;
+}
+
+/*Header*/
+
+header {
+    background-image: url(../img/auto2.jpg);
+    background-size: cover;
+    height: 40vh;
+}
+
+header h1 {
+    font-size: 6rem;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    line-height: 40vh;
+    background-color: rgba(50, 50, 50, 0.5);
+}
+
+/*Nawigacja*/
+nav {
+    max-width: 1440px;
+    font-size: 0;
+    margin: 30px auto;
+    text-align: right;
+}
+
+nav a {
+    display: inline-block;
+    padding: 10px;
+    margin: 0 20px;
+    color: #666;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 1.8rem;
+    transition: 0.15s;
+}
+
+nav a.visit {
+    border: 2px solid #666;
+    padding: 10px 30px;
+    margin-right: 100px;
+    margin-left: 120px;
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    border-bottom: 2px solid #222;
+    color: #222;
+}
+
+.visit:hover {
+    background-color: royalblue;
+    color: white;
+    border: 2px solid royalblue;
+}
+
+/*Main*/
+
+main {
+    max-width: 1440px;
+    margin: 5vh auto;
+    font-size: 0;
+}
+
+main p.description {
+    font-size: 2.2rem;
+    text-align: center;
+    margin: 0 30px 50px;
+    line-height: 170%;
+}
+
+main div.feature {
+    display: inline-block;
+    width: 33.33%;
+}
+
+main div.image {
+    height: 200px;
+    background-color: royalblue;
+    margin: 20px 30px;
+}
+
+main h2 {
+    font-size: 2rem;
+    text-align: center;
+    color: #222;
+}
+
+/*Footer*/
+
+footer {
+    padding: 20px 0;
+    background-color: black;
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+}

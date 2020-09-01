@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: arial, sans-serif;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/*Header*/
+
+header div {
+    width: 19%;
+    height: 200px;
+    margin: 3%;
+    float: left;
+    background-color: royalblue;
+}
+
+header div:nth-child(1) {
+    background-color: greenyellow;
+}
+
+header div:nth-child(2) {
+    background-color: darkred;
+}
+
+header div:nth-child(3) {
+    background-color: deepskyblue;
+}
+
+header div:nth-child(4) {
+    background-color: deeppink;
+}
+
+header div:nth-child(1):hover {
+    background-color: lawngreen;
+}
+
+header div:nth-child(2):hover {
+    background-color: firebrick;
+}
+
+header div:nth-child(3):hover {
+    background-color: dodgerblue;
+}
+
+header div:nth-child(4):hover {
+    background-color: hotpink;
+}
+
+
+
+/*Nawigacja*/
+
+nav {
+    background-color: #555;
+    padding: 10px 0 10px 50px;
+    margin-bottom: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+nav ul li {
+    width: 25%;
+    float: left;
+    margin-left: 30px;
+}
+
+nav ul li a {
+    display: block;
+    box-sizing: border-box;
+    padding: 10px 30px;
+    border: 2px solid;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    font-size: 26px;
+    transition: .3s;
+}
+
+nav ul li a:hover {
+    background-color: #777;
+    color: yellow;
+}
+
+/*Artykuły*/
+
+.blog {
+    margin-top: 40px;
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+main {
+    padding: 0 20px 0 20px;
+    width: 65%;
+    float: left;
+}
+
+article h1 {
+    text-transform: uppercase;
+}
+
+article img {
+    margin: 20px 20px 20px 0;
+    width: 200px;
+    float: left;
+}
+
+article p {
+    margin-top: 20px;
+}
+
+
+
+/*Aside*/
+
+aside {
+    width: 30%;
+    float: left;
+}
+
+section.contact {
+    padding: 20px 15px;
+    background-color: #ddd;
+}
+
+.contact a {
+    color: black;
+    text-decoration: none;
+}
+
+.contact p {
+    margin-bottom: 24px;
+    font-weight: bold;
+}
+
+.contact ul {
+    list-style: none;
+}
+
+.contact li {
+    margin-top: 10px;
+}
+
+.contact li i {
+    margin-right: 20px;
+    font-size: 16px;
+}
+
+/*Stopka*/
+
+footer {
+    padding: 20px 0;
+    margin-top: 40px;
+    ;
+    background-color: #444;
+    color: white;
+    text-align: center;
+}

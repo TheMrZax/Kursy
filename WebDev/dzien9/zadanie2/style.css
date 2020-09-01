@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 120vh;
+}
+
+nav {}
+
+nav div.logo {
+    width: 20%;
+    height: 40px;
+    padding-right: 10%;
+    /*    border-right: 10vw solid yellow;*/
+    background-color: royalblue;
+    float: left;
+}
+
+nav ul {
+    height: 40px;
+    width: 70%;
+    background-color: goldenrod;
+    float: left;
+    list-style-type: none;
+}
+
+nav ul li {
+    float: left;
+    width: 25%;
+}
+
+li a {
+    display: block;
+    font-size: 20px;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    line-height: 40px;
+    ;
+    font-family: arial, sans-serif;
+    transition: .3s;
+}
+
+li a:hover {
+    font-size: 28px;
+}

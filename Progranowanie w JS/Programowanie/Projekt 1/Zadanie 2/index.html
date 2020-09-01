@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            font-family: sans-serif;
+        }
+
+        .divby3 {
+            font-size: 24px;
+        }
+    </style>
+</head>
+
+<body>
+    <button>Dodaj element listy</button>
+    <ul>
+    </ul>
+    <script>
+        const btn = document.querySelector('button');
+        const ul = document.querySelector('ul');
+        let counter = 1
+
+        const addListItem = () => {
+            const li = document.createElement('li')
+            li.textContent = counter;
+            ul.appendChild(li)
+            if (counter % 3 == 0) {
+                li.classList.add('divby3');
+            }
+            counter += 92;
+        }
+
+        btn.addEventListener('click', addListItem);
+    </script>
+</body>
+
+</html>

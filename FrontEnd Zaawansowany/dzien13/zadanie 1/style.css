@@ -1,0 +1,42 @@
+body {
+    min-height: 150vh;
+}
+
+.wrap {
+    margin: 10px 70px;
+}
+
+.wrap p {
+    font-family: arial;
+}
+
+.arrow {
+    position: fixed;
+    bottom: 70px;
+    right: 40px;
+    font-size: 40px;
+    transition: .3s linear;
+}
+
+.arrow:hover {
+    cursor: pointer;
+}
+
+.arrow.on {
+    transform: rotate(180deg);
+    bottom: 330px;
+}
+
+nav {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: -270px;
+    height: 300px;
+    background-color: #000;
+    transition: .3s linear;
+}
+
+nav.on {
+    bottom: 0;
+}

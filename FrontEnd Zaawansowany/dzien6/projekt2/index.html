@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            animation: move 10s infinite linear, color 10s infinite linear;
+            /* animation-name: move, color;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear; */
+        }
+
+        @keyframes move {
+            0% {
+                margin-left: 0;
+                /* Wartość domyślna  */
+            }
+
+            30% {
+                margin-left: calc(100% - 200px);
+            }
+
+            50% {
+                margin-left: calc(100% - 200px);
+            }
+
+            80% {
+                margin-left: 0;
+            }
+
+            100% {
+                margin-left: 0;
+                /* Wartość domyślna  */
+            }
+        }
+
+        @keyframes color {
+            30% {
+                background-color: #000;
+            }
+
+            50% {
+                background-color: #000;
+            }
+
+            80% {
+                background-color: #f00;
+            }
+
+            100% {
+                margin-left: calc(100% - 100px);
+                width: 100px;
+                height: 100px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        :root {
+            --textSize: 100px;
+        }
+
+        button {
+            font-size: 40px;
+        }
+
+        h1 {
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: arial;
+            font-size: var(--textSize);
+            transition: .4s;
+            border: 0;
+        }
+
+        h1.larger {
+            font-size: calc(var(--textSize)*2);
+        }
+
+        h1.smaller {
+            font-size: calc(var(--textSize)/2);
+        }
+
+        h1.border {
+            border: 20px solid black;
+        }
+
+        button.enable {
+            background-color: lightgreen;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <button class="larger">2xWiększy</button>
+    <button class="smaller">2xMniejszy</button>
+    <button class="border">Obramowanie</button>
+    <h1>Nazwa</h1>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+    <script>
+        $(".larger").click(function () {
+            $("h1").toggleClass("larger");
+            $("button.larger").toggleClass("enable")
+        })
+
+        $(".smaller").click(function () {
+            $("h1").toggleClass("smaller");
+            $("button.smaller").toggleClass("enable")
+        })
+
+        $(".border").click(function () {
+            $("h1").toggleClass("border");
+            $("button.border").toggleClass("enable")
+        })
+    </script>
+
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+body {
+    min-height: 200vh;
+}
+
+main {
+    margin: 10px 80px;
+    transition: .15s linear;
+    text-align: justify;
+}
+
+main.show {
+    padding-left: 300px;
+}
+
+.burger {
+    position: fixed;
+    top: 40px;
+    right: 30px;
+    width: 50px;
+    text-align: center;
+    font-size: 40px;
+    color: #222;
+    line-height: 50px;
+    transition: .23s linear;
+    text-shadow: 0 0 5px black;
+}
+
+.burger:hover {
+    cursor: pointer;
+}
+
+aside {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: -300px;
+    width: 300px;
+    background-color: #000;
+    transition: .15s linear;
+}
+
+.fas {
+    display: none;
+}
+
+i.show {
+    display: block;
+}
+
+aside.show {
+    left: 0;
+}
